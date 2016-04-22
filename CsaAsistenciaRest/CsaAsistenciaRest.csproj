@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Actividad.cs" />
+    <Compile Include="Planilla.cs" />
     <Compile Include="CsaAsistencias.svc.cs">
       <DependentUpon>CsaAsistencias.svc</DependentUpon>
     </Compile>

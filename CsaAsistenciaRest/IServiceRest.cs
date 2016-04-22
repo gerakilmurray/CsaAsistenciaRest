@@ -9,5 +9,8 @@ namespace CsaAsistenciaRest
 
         [OperationContract]
         Actividades GetActividades(int idProfesor);
+
+        [OperationContract]
+        Planilla GetPlanillaActividad(int idActividad);
     } 
 }

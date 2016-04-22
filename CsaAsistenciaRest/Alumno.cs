@@ -6,6 +6,7 @@ namespace CsaAsistenciaRest
     public class Alumno
     {
         int dni;
+        string nroSocio;
         string nombre;
         string apellido;
 
@@ -13,11 +14,26 @@ namespace CsaAsistenciaRest
         {
         }
 
+        public Alumno(int dni, string nroSocio, string nombre, string apellido)
+        {
+            this.dni = dni;
+            this.nroSocio = nroSocio;
+            this.nombre = nombre;
+            this.apellido = apellido;
+        }
+
         [DataMember]
         public int DniValue
         {
             get { return dni; }
             set { dni = value; }
+        }
+
+        [DataMember]
+        public string NroSocioValue
+        {
+            get { return nroSocio; }
+            set { nroSocio = value; }
         }
 
         [DataMember]

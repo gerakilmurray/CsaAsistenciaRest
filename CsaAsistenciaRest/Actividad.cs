@@ -12,6 +12,12 @@ namespace CsaAsistenciaRest
         {
         }
 
+        public Actividad(int id, string descripcion)
+        {
+            this.id = id;
+            this.descripcion = descripcion;
+        }
+
         [DataMember]
         public int IdValue
         {

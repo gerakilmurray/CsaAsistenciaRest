@@ -29,24 +29,37 @@ namespace CsaAsistenciaRest
                 throw new ArgumentNullException("idProfesor");
             }
             Actividades lista = new Actividades();
-            Actividad hockeyM21 = new Actividad();
-            hockeyM21.IdValue = 1;
-            hockeyM21.DescripcionValue = "Jirafales Hockey mañana Fem-21";
+            Actividad hockeyM21 = new Actividad(1, "Jirafales Hockey mañana Fem-21");
             lista.addActividad(hockeyM21);
-            Actividad hockeyM17 = new Actividad();
-            hockeyM17.IdValue = 1;
-            hockeyM17.DescripcionValue = "Jirafales Hocket mañana Fem-17";
+            Actividad hockeyM17 = new Actividad(2, "Jirafales Hocket mañana Fem-17");
             lista.addActividad(hockeyM17);
-            Actividad hockeyT21 = new Actividad();
-            hockeyT21.IdValue = 1;
-            hockeyT21.DescripcionValue = "Jirafales Hocket tarde Fem-21";
+            Actividad hockeyT21 = new Actividad(3, "Jirafales Hocket tarde Fem-21");
             lista.addActividad(hockeyT21);
-            Actividad hockeyT17 = new Actividad();
-            hockeyT17.IdValue = 1;
-            hockeyT17.DescripcionValue = "Jirafales Hocket tarde Fem-17";
+            Actividad hockeyT17 = new Actividad(4, "Jirafales Hocket tarde Fem-17");
             lista.addActividad(hockeyT17);
 
             return lista;
+        }
+
+
+        public Planilla GetPlanillaActividad(int idActividad)
+        {
+            if (idActividad <= 0)
+            {
+                throw new ArgumentNullException("idActividad");
+            }
+            Planilla planilla = new Planilla();
+
+            Alumno a1 = new Alumno(44333222, "11223344/5", "María Laura", "Fernández");
+            Alumno a2 = new Alumno(45333222, "11223344/6", "María Emilia", "Fernández");
+            Alumno a3 = new Alumno(46333222, "11223344/7", "María Eugenia", "Fernández");
+
+            planilla.IdActividadValue = idActividad;
+            planilla.addAlumno(a1);
+            planilla.addAlumno(a2);
+            planilla.addAlumno(a3);
+
+            return planilla;
         }
     }
 }

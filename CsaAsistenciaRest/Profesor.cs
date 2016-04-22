@@ -13,6 +13,13 @@ namespace CsaAsistenciaRest
         {
         }
 
+        public Profesor(int id, string nombre, string apellido)
+        {
+            this.id = id;
+            this.nombre = nombre;
+            this.apellido = apellido;
+        }
+
         [DataMember]
         public int IdValue
         {
