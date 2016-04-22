@@ -61,5 +61,15 @@ namespace CsaAsistenciaRest
 
             return planilla;
         }
+
+        bool IServiceRest.SaveAsistencia(int idProfesor, int idActividad, int dniAlumno)
+        {
+            return true;            
+        }
+
+        bool IServiceRest.RemoveAsistencia(int idProfesor, int idActividad, int dniAlumno)
+        {
+            return true;
+        }
     }
 }
